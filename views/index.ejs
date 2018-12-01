@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Express</title>
+    <title>Administrador de Automoviles</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
 </head>
+
 <body>
     <h1>Administrador de Automoviles</h1>
-    <form action="" method="POST" name="formRegister">
-        <label for="modelo">Modelo: </label>
-        <input type="text" name="modelo">
-        <label for="marca">Marca: </label>
-        <input type="text" name="marca">
-        <label for="placa"> Placa: </label>
-        <input type="text" name="placa">
+    <form class="form-inline" method="POST" name="formRegister">
+        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Modelo" name="modelo">
+        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Marca" name="marca">
+        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Placa" name="placa">
+        <button type="submit" class="btn btn-primary">Guardar</button>
     </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Placa</th>
+            </tr>
+        </thead>
+        <tbody id="filas">
+        </tbody>
+    </table>
+    <script src="../public/javascripts/main.js"></script>
 </body>
+
 </html>
