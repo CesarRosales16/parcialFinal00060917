@@ -31,9 +31,9 @@ automovilController.store = async function (req, res, next) {
 automovilController.update = async function (req, res, next) {
     let { id } = req.params;
     let automovil = {
-        modelo = req.body.modelo,
-        marca = req.body.marca,
-        placa = req.body.placa,
+        modelo: req.body.modelo,
+        marca: req.body.marca,
+        placa: req.body.placa,
     };
     //console.log(automovil);
     try {
