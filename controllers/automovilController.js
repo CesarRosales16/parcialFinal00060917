@@ -44,3 +44,11 @@ automovilController.update = async function (req, res, next) {
         return res.status(500).json({ err: err, message: 'No se actualizo, revise' });
     }
 }
+
+automovilController.delete = async function(req, res, next) {
+    let {id} = req.params;
+    await Automovil.remove({_id:id});
+    return res.status(200).json({ "message": 'Se elimino con exito' });
+}
+
+module.exports = automovilController;
