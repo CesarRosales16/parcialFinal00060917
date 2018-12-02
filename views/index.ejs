@@ -13,7 +13,7 @@
 
 <body>
     <h1>Administrador de Automoviles</h1>
-    <form class="form-inline" method="POST" name="formRegister">
+    <form class="form-inline" method="POST" id="formRegister">
         <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Modelo" name="modelo">
         <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Marca" name="marca">
         <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Placa" name="placa">
@@ -26,12 +26,18 @@
                 <th scope="col">Modelo</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Placa</th>
+                <th scope="col">Opciones</th>
             </tr>
         </thead>
-        <tbody id="filas">
+        <tbody id="filas">            
         </tbody>
     </table>
-    <script src="../public/javascripts/main.js"></script>
+    <div id="exampleModal">
+        <form action="" method="post" id="formUpdate">
+
+        </form>
+    </div>
+    <script src="javascripts/main.js"></script>
 </body>
 
 </html>

@@ -16,9 +16,11 @@ automovilController.findAutomovil = async function (req, res, next) {
 
 automovilController.store = async function (req, res, next) {
     let automovil = new Automovil();
+    console.log("antes"+automovil.modelo);
     automovil.modelo = req.body.modelo;
     automovil.marca = req.body.marca;
     automovil.placa = req.body.placa;
+    console.log("despues"+automovil.modelo);
     try {
         await automovil.save();
         return res.status(200).json({ "message": 'Se añadio con exito' });
